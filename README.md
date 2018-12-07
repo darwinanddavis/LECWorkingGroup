@@ -1,5 +1,7 @@
 # Quantifying effects of parasites on ecosystem nutrient cycling  
 
+![](lec.jpeg)
+
 [Living Earth Collaborative Center for Biodiversity](https://livingearthcollaborative.wustl.edu/)    
 Washington University  
 St. Louis, MO, USA     
