@@ -4,3 +4,40 @@
 ]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git init
 Initialized empty Git repository in /Users/malishev/Documents/Emory/research/workshops/stl/model/.git/
 ]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git g[Kcommit -m ''i'n'i't' 'c'o'm'm'i't'
+[master (root-commit) 8915142] init commit
+ 22 files changed, 423 insertions(+)
+ create mode 100644 .Rhistory
+ create mode 100644 .Rproj.user/ABE7B653/console06/729B3ED8
+ create mode 100644 .Rproj.user/ABE7B653/console06/729B3ED8.env
+ create mode 100644 .Rproj.user/ABE7B653/console06/INDEX001
+ create mode 100644 .Rproj.user/ABE7B653/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/ABE7B653/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/ABE7B653/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/ABE7B653/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/ABE7B653/rmd-outputs
+ create mode 100644 .Rproj.user/ABE7B653/saved_source_markers
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/63DFB668
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/INDEX
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-AD14A32/517F24DB
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-AD14A32/517F24DB-contents
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-AD14A32/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 NPSI.R
+ create mode 100644 NPSI.Rproj
+ create mode 100644 README.md
+ create mode 100644 pi_death_beta.pdf
+ create mode 100644 pis_death_beta.pdf
+ create mode 100644 pt_beta_death.pdf
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git ,og
+git: ',og' is not a git command. See 'git --help'.
+
+Did you mean this?
+	log
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git ,og[K[K[Klog
+[?1h=[33mcommit 8915142ae7629263ddc1dd1c7050bb7561ebaa0e[m[m
+Author: darwinanddavis <matthew.malishev@gmail.com>[m
+Date:   Fri Dec 7 17:15:41 2018 -0600[m
+[m
+    init commit[m
+[K[?1l>]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git log[K
