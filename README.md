@@ -7,20 +7,20 @@ Washington University
 St. Louis, MO, USA     
 December 4-7, 2018    
 
-Amanda Koltz (co-organizer), Washington University in St. Louis, USA; akoltz@wustl.edu  
-Rachel Penczkowski (co-organizer), Washington University in St. Louis, USA; rpenczykowski@wustl.edu  
-Sharon Deem (co-organizer), Institute for Conservation Medicine, St. Louis Zoo, USA; deem@stlzoo.org  
-Vanessa Ezenwa (co-organizer), University of Georgia, USA; vezenwa@uga.edu  
-Susan Kutz, University of Calgary, Canada; skutz@ucalgary.ca
-Brandon Barton, Mississippi State University, USA; barton@biology.msstate.edu    
-Zoe Johnson, Mississippi State University, USA; zej4@msstate.edu  
-Aimee Classen, University of Vermont, USA; Aimee.Classen@uvm.edu  
-J. Trevor Vannatta, Purdue University, USA; jvannat@purdue.edu  
-Matt Malishev, Emory University, USA; matthew.malishev@emory.edu
-David Civitello, Emory University, USA; david.j.civitello@emory.edu  
-Daniel Preston, University of Wisconsin-Madison, USA; daniel.preston@wisc.edu  
-Maris Brenn-White, St. Louis Zoo, USA; mbrennwhite@stlzoo.org  
-Kim Medley, Washington University in St. Louis, USA; kim.medley@wustl.edu       
+Amanda Koltz (co-organizer), Washington University in St. Louis, USA  
+Rachel Penczkowski (co-organizer), Washington University in St. Louis, USA  
+Sharon Deem (co-organizer), Institute for Conservation Medicine, St. Louis Zoo, USA  
+Vanessa Ezenwa (co-organizer), University of Georgia, USA  
+Susan Kutz, University of Calgary, Canada   
+Brandon Barton, Mississippi State University, USA  
+Zoe Johnson, Mississippi State University, USA  
+Aimee Classen, University of Vermont, USA  
+J. Trevor Vannatta, Purdue University, USA  
+Matt Malishev, Emory University, USA  
+David Civitello, Emory University, USA  
+Daniel Preston, University of Wisconsin-Madison, USA  
+Maris Brenn-White, St. Louis Zoo, USA  
+Kim Medley, Washington University in St. Louis, USA  
 
 Ideas behind this research were developed at the Living Earth Collaborative working group on the effects of parasites on ecosystem nutrient cycling, Washington University, St. Louis, MO, USA, December 4-7, 2018.    
 
