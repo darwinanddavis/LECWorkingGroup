@@ -1,6 +1,6 @@
 # Quantifying effects of parasites on ecosystem nutrient cycling  
 
-![](lec.jpeg)
+![LEC](lec.jpeg)  
 
 [Living Earth Collaborative Center for Biodiversity](https://livingearthcollaborative.wustl.edu/)    
 Washington University  
@@ -44,7 +44,4 @@ All troubleshooting and bugs can be sent as a git issue or to matthew.malishev [
 :mag: [Website](https://www.researchgate.net/profile/Matt_Malishev)    
 :bird: [@darwinanddavis](https://twitter.com/darwinanddavis)  
 :email: matthew.malishev [at] gmail.com    
-
-#### for rendering HTML from Github, prepend this to html link.  
-http://htmlpreview.github.com/? 
 
