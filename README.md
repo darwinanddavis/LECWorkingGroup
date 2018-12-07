@@ -1,11 +1,11 @@
 # Quantifying effects of parasites on ecosystem nutrient cycling  
 
-![LEC](lec.jpeg)  
+![LEC](lec.jpeg)    
 
-[Living Earth Collaborative Center for Biodiversity](https://livingearthcollaborative.wustl.edu/)    
-Washington University  
-St. Louis, MO, USA     
-December 4-7, 2018    
+**[Living Earth Collaborative Center for Biodiversity](https://livingearthcollaborative.wustl.edu/)**    
+**Washington University**    
+**St. Louis, MO, USA**       
+**December 4-7, 2018**       
 
 Amanda Koltz (co-organizer), Washington University in St. Louis, USA  
 Rachel Penczkowski (co-organizer), Washington University in St. Louis, USA  
