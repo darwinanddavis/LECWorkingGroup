@@ -170,12 +170,22 @@ npsi_func <- function(){ # start npsi_func
 ################################### end simulation model  #################################
 ##########################################################################################
 
-# run function
+### run function 
 npsi_func()
 
 ################################### plot results manually  #################################
-  
-# plot results
+
+# set parameter ranges (min 0, max 1)
+beta_access <- 0.1 # choose your beta value you want to plot at the end
+death_access <- 0.9 # choose your death value you want to plot at the end
+colvv <- "orange" # choose your plot line colour
+
+# then run this part to plot in your live R session
+
+outplot <- filter(out_tibble, death == death_access & beta == beta_access)
+outplot <- outplot$outs ; outplot <- as.data.frame(outplot) # clean output
+outplot$"Total host population" <- outplot[,"S"] + outplot[,"I"] # add sum host population
+
 layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
 colnames(outplot) <- c("Time",
                        "Nutrient biomass",
