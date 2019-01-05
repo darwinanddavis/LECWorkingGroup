@@ -28,8 +28,8 @@ Develop a predictive framework for estimating indirect effects of parasites on e
 
 ## Instructions for running the model    
 
-:one: Download the model instructions document.  
-:two: Open and run the simulation model in `R`.  
+:one: Download 'R' and 'RStudio'.    
+:two: [Download](https://raw.githubusercontent.com/darwinanddavis/LECWorkingGroup/master/NPSI.R) and run the simulation model in `RStudio`.    
 
 ## Troubleshooting  
 
