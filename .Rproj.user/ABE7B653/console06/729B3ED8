@@ -40,4 +40,8 @@ Author: darwinanddavis <matthew.malishev@gmail.com>[m
 Date:   Fri Dec 7 17:15:41 2018 -0600[m
 [m
     init commit[m
-[K[?1l>]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git log[K
+[K6300L-127771-M:model malishev$ ls -a
+.		.Rhistory	.gitignore	README.md
+..		.Rproj.user	NPSI.R		lec.jpeg
+.DS_Store	.git		NPSI.Rproj
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
