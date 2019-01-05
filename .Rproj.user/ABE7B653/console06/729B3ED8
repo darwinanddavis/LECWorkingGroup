@@ -45,3 +45,60 @@ Date:   Fri Dec 7 17:15:41 2018 -0600[m
 ..		.Rproj.user	NPSI.R		lec.jpeg
 .DS_Store	.git		NPSI.Rproj
 ]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit -m ''b'e't'a' 't'e's't'
+[master 442b207] beta test
+ 6 files changed, 222 insertions(+), 5 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (86%)
+ create mode 100644 NPSI.R
+ create mode 100644 NPSI.Rproj
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git remote -v
+origin	https://github.com/darwinanddavis/LECWorkingGroup (fetch)
+origin	https://github.com/darwinanddavis/LECWorkingGroup (push)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git push
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 3.96 KiB | 0 bytes/s, done.
+Total 13 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   03aadc7..442b207  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ open EW[K[KREADME.md 
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .[KREADME.md 
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commi t0m[K[K[K[Kt 0[K-m ''r'e'a'd'm'e'
+[master ffda010] readme
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git pois[K[K[Kush
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 424 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   442b207..ffda010  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git pushcommit -m 'readme'[4Padd README.md 
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add README.md push[Kcommit -m 'readme'
+[master 6bed0b5] readme
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit -m 'readme'[4Padd README.md push[K
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 306 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   ffda010..6bed0b5  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git pushcommit -m 'readme'[4Padd README.md 
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add README.md push[Kcommit -m 'readme'
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/ABE7B653/console06/729B3ED8[m
+
+no changes added to commit
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit -m 'readme'[4Padd README.md commit -m 'readme'[Kgit add[K[K[Kreset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/729B3ED8
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
