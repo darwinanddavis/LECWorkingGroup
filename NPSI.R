@@ -30,12 +30,10 @@
 ##########################################################################################
 
 # set your working directory 
-wd <- "/Users/malishev/Documents/Emory/research/workshops/stl/model"
+wd <- "paste the path to where you saved the model here (with these quotes)"
 setwd(wd)
 
-# set parameter ranges
-beta_pars <- seq(0.1,1,0.1) # transmission rate in model 
-death_pars <- seq(0.1,1,0.1) # death rate in model
+# set parameter ranges (min 0, max 1)
 beta_access <- 0.4 # choose your beta value you want to plot at the end
 death_access <- 0.5 # choose your death value you want to plot at the end
 colvv <- "orange" # choose your plot line colour
@@ -90,9 +88,8 @@ out_master <- rep(
     ,prod(as.numeric(summary(param_space)[,1]))
   )
 sc <- 1 # timer in simulation model 
-
-out_master[[1]]$Parameter[2]
-out_master[[1]]$Output[3]
+beta_pars <- seq(0.1,1,0.1) # transmission rate in model 
+death_pars <- seq(0.1,1,0.1) # death rate in model
 
 ##########################################################################################
 ################################### run simulation model  #################################
@@ -179,10 +176,6 @@ npsi_func()
 ################################### plot results manually  #################################
   
 # plot results
-beta_access <- 0.9
-death_access <- 0.1
-colvv <- "orange"
-
 layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
 colnames(outplot) <- c("Time",
                        "Nutrient biomass",
