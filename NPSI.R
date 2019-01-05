@@ -30,12 +30,13 @@
 ##########################################################################################
 
 # set your working directory 
+# E.g "/Users/malishev/dope_models/my_dope_model/"
 wd <- "paste the path to where you saved the model here (with these quotes)"
 setwd(wd)
 
 # set parameter ranges (min 0, max 1)
-beta_access <- 0.4 # choose your beta value you want to plot at the end
-death_access <- 0.5 # choose your death value you want to plot at the end
+beta_access <- 0.1 # choose your beta value you want to plot at the end
+death_access <- 0.9 # choose your death value you want to plot at the end
 colvv <- "orange" # choose your plot line colour
 
 ## initial conditions
@@ -167,11 +168,11 @@ npsi_func <- function(){ # start npsi_func
   cat(paste0("\n\n\nPlot is saved in \n",getwd(), "\nas npsi_model_plot.pdf\n\n\n"))
 } # ------- end npsi_func 
 
+### run model function 
+npsi_func()
+
 ################################### end simulation model  #################################
 ##########################################################################################
-
-### run function 
-npsi_func()
 
 ################################### plot results manually  #################################
 
