@@ -115,3 +115,16 @@ remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2) 
 To https://github.com/darwinanddavis/LECWorkingGroup
    6bed0b5..4fef33c  master -> master
 ]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git push[Kgit pushcommit -m 'readme'add .[K
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .[1Ppushcommit -m 'readme'
+[master bdda0e9] readme
+ 1 file changed, 13 insertions(+)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit -m 'readme'add .[K[1Ppush
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 776 bytes | 0 bytes/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)   [Kremote: Resolving deltas:  33% (1/3)   [Kremote: Resolving deltas:  66% (2/3)   [Kremote: Resolving deltas: 100% (3/3)   [Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   4fef33c..bdda0e9  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
