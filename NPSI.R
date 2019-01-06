@@ -26,8 +26,10 @@
 
 
 ##########################################################################################
+################################# User inputs for model ##################################
 ##########################################################################################
-##########################################################################################
+
+
 
 # set your working directory 
 # E.g "/Users/malishev/dope_models/my_dope_model/"
@@ -48,7 +50,7 @@ years <- 100 # number of years to run simulation
 time.out <- 0.01 # simulation time step (0.01 = 1 year if years = 100) 
 
 ##########################################################################################
-##########################################################################################
+##################################### Setup simulation model #############################
 ##########################################################################################
 
 # ---------------------- run the model from here # ---------------------- 
@@ -70,13 +72,15 @@ cat("plot_it( \n0 for presentation, 1 for manuscript, \nset colour for backgroun
 plot_it(0,"blue","Blues","YlOrRd",1,"mono") # set plot function params       
 plot_it_gg("white") # same as above for ggplot   
 
+# set param space
+beta_pars <- seq(0.1,1,0.1) # transmission rate in model 
+death_pars <- seq(0.1,1,0.1) # death rate in model
+
 # desired outputs
 out <- list()
 out_master <- list() # NPSI output 
-biomass_list <- list() # just product released (for all params)
-uninfected_list <- list() # just uninfected hosts (for all params)
-infected_list <- list() # just infected hosts (for all params)
-totalhost_list <- list() # all hosts (for all params)
+out_tibble <- tibble()
+outplot <- list()
 param_space <- list(beta_pars,death_pars) # summed parameter space 
 
 # create empty list
@@ -89,11 +93,9 @@ out_master <- rep(
     ,prod(as.numeric(summary(param_space)[,1]))
   )
 sc <- 1 # timer in simulation model 
-beta_pars <- seq(0.1,1,0.1) # transmission rate in model 
-death_pars <- seq(0.1,1,0.1) # death rate in model
 
 ##########################################################################################
-################################### run simulation model  #################################
+################################### create simulation model  #################################
 
 # to set pars as individual beta and death values
 npsi_func <- function(){ # start npsi_func
@@ -132,7 +134,8 @@ npsi_func <- function(){ # start npsi_func
     } # end death pars   
   } # end beta pars    
  
-  # -------  clean output # ------- 
+  # -------  clean output # -------
+  # save simulation model to global vector (tibble)
   out_tibble <- tibble(
     params = map(out_master, "Parameter"),
     outs = map(out_master, "Output")
@@ -154,8 +157,8 @@ npsi_func <- function(){ # start npsi_func
   colnames(outplot) <- c("Time",
                          "Nutrient biomass",
                          "Product biomass", 
-                         "Host population size \n(susceptible)",
-                         "Host population size \n(infected)",
+                         "Susceptible host pop",
+                         "Infected host pop",
                          "Total host population")
   for (name in names(outplot)[c(3:5,2,6)]){ # start plot
     plot(outplot[,1],outplot[,name],type="l",las=1,bty="n",
@@ -166,11 +169,12 @@ npsi_func <- function(){ # start npsi_func
   # add mean plot
   dev.off() # save output to dir
   cat(paste0("\n\n\nPlot is saved in \n",getwd(), "\nas npsi_model_plot.pdf\n\n\n"))
+  return(out_tibble)
 } # ------- end npsi_func 
 
 ### run model function 
-npsi_func()
-
+out_tibble <- npsi_func()
+  
 ################################### end simulation model  #################################
 ##########################################################################################
 
