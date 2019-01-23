@@ -240,3 +240,39 @@ remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4) 
 To https://github.com/darwinanddavis/LECWorkingGroup
    116bd36..e67aa72  master -> master
 git add .
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit -m ''f'i'x'e'd'[1P'[1P'[1P'[1P'u'n'c't'i'o'n' 'u'p'd'a't'e'[1P'[1P'[1P'[1P'[1P'[1P'o'u't'p'u't'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[K[C's'a'v'e'd' 'f'u'n'c't'i'o'n' 'o'u't'p'u'o't'[1P'[1P't' 't'o' '[1P'[1P'[1P'[1P' 't'o' 's'[1P'w's'
+[master 33775e7] saved function output to ws
+ 6 files changed, 1092 insertions(+), 17 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (86%)
+ create mode 100644 npsi_model_plot.pdf
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git push
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 60.56 KiB | 0 bytes/s, done.
+Total 13 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   e67aa72..33775e7  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git pushcommit -m 'saved function output to ws'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[KREADME.md 
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit 0m[K[K'[K-m ''r'e'a'd'm'e'
+[master 5d1de9b] readme
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git pi[Kush
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 307 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   33775e7..5d1de9b  master -> master
+[K6300L-127771-M:model malishev$ ls -a
+.			.Rproj.user		NPSI.Rproj
+..			.git			README.md
+.DS_Store		.gitignore		lec.jpeg
+.Rhistory		NPSI.R			npsi_model_plot.pdf
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git emote [K[K[K[K[K[Kremote -v
+origin	https://github.com/darwinanddavis/LECWorkingGroup (fetch)
+origin	https://github.com/darwinanddavis/LECWorkingGroup (push)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .

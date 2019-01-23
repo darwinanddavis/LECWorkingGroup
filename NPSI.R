@@ -113,7 +113,7 @@ npsi_func <- function(){ # start npsi_func
         with(as.list(c(state, parameters)),{
           
           dN.dt <- a - l*N - fp*N*P + (d+ws)*S + (d+v+wi)*I  # nutrients in env
-          dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S*+fi*I) # products released 
+          dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S*+fi*I) # plants produced  
           dS.dt <- P*(es*fs*S + ei*fi*I) - beta*S - (d+ws)*S # susceptible host population change
           dI.dt <- beta*S - (d+v+wi)*I # infected hosts population change
           
