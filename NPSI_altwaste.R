@@ -1,3 +1,5 @@
+### NPSI alternative waste production ###
+
 ## 6 Dec 2018
 ## LEC working group 
 ## Rachel Penczykowski, J. Trevor Vannatta, Matt Malishev, Zoe Johnson
@@ -20,6 +22,7 @@
 ## fs = feeding rate of susceptible hosts
 ## fi = feeding rate of infected hosts
 ## d = background host death rate
+## dP = background plant death rate (nutrient leaching)
 ## v = mortality rate from infection
 ## ws = rate of waste production from susceptible hosts
 ## wi = rate of waste production from infected hosts
@@ -88,35 +91,49 @@ out_master <- rep(
   list(structure(list(
     pars = numeric(), 
     outs = list()
-    ),
-    .Names = c("Parameter", "Output")))
-    ,prod(as.numeric(summary(param_space)[,1]))
-  )
+  ),
+  .Names = c("Parameter", "Output")))
+  ,prod(as.numeric(summary(param_space)[,1]))
+)
 sc <- 1 # timer in simulation model 
 
 ##########################################################################################
 ################################### create simulation model  #################################
 
 # to set pars as individual beta and death values
-npsi_func <- function(){ # start npsi_func
+npsi_func <- function(waste){ # start npsi_func
   
   # ------- start simulation # ------- 
   for(beta in beta_pars){ # pass through beta values
     for(death in death_pars){ # pass through death values 
       parameters<-c(r=0.2, K=100, a=500, l=5, fp=0.5, beta=beta, 
                     es=0.1, ei=0.05, fs=0.2, fi=0.1,
-                    d=death, v=0.1, ws=0.05, wi=0.09)
+                    d=death, v=0.1, ws=0.05, wi=0.09, dp=0.1)
       
       state<-c(N=N, P=P, S=S, I=In) # set initial conditions
       
       NPSI<-function(t, state, parameters) { 
         with(as.list(c(state, parameters)),{
           
-          dN.dt <- a - l*N - fp*N*P + (d+ws)*S + (d+v+wi)*I  # nutrients in env
-          dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S+fi*I) # plants produced  
-          dS.dt <- P*(es*fs*S + ei*fi*I) - beta*S - (d+ws)*S # susceptible host population change
-          dI.dt <- beta*S - (d+v+wi)*I # infected hosts population change
-          
+          if(waste=="waste_sum"){
+            dN.dt <- a - l*N - fp*N*P + dp*P + (d+(1-es)*fs*P)*S + (d+v+(1-ei)*fi*P)*I # summed waste with plant death
+            dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S+fi*I) # plants produced  
+            dS.dt <- P*(es*fs*S + ei*fi*I) - beta*S - d*S # susceptible host population change
+            dI.dt <- beta*S - (d+v)*I # infected hosts population change
+          } # summed waste with plant death      
+          if(waste=="waste_drool"){
+            dN.dt = a - l*N - fp*N*P + (d+ws)*S + (d+v+wi)*I + (1 - P*(es*fs*S + ei*fi*I)) # nutrient input from messy eating
+            dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S+fi*I) # plants produced  
+            dS.dt <- P*(es*fs*S + ei*fi*I) - beta*S - (d+ws)*S # susceptible host population change
+            dI.dt <- beta*S - (d+v+wi)*I # infected hosts population change
+          } # waste from messy eating per feeding bout
+          if(waste=="waste_host"){
+            dN.dt <- a - l*N - fp*N*P + (d+ws)*S + (d+v+wi)*I 
+            dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S+fi*I) # plants produced  
+            dP.dt <- fp*N*r*P*(1-(P/K)) - P*(fs*S*+fi*I) # plants produced  
+            dS.dt <- P*(es*fs*S + ei*fi*I) - beta*S - (d+ws)*S # susceptible host population change
+            dI.dt <- beta*S - (d+v+wi)*I # infected hosts population change
+          } # nutrients in env
           list(c(dN.dt, dP.dt, dS.dt, dI.dt)) # compile outputs 
         })
       } # end npsi function
@@ -133,7 +150,7 @@ npsi_func <- function(){ # start npsi_func
       sc <- sc + 1
     } # end death pars   
   } # end beta pars    
- 
+  
   # -------  clean output # -------
   # save simulation model to global vector (tibble)
   out_tibble <- tibble(
@@ -148,7 +165,7 @@ npsi_func <- function(){ # start npsi_func
   
   # ------- plotting ----------
   # start save plot to local dir  
-  pdf(paste0(getwd(),"/npsi_model_plot.pdf"),onefile=T,width=10,height=8,paper="a4r") 
+  pdf(paste0(getwd(),"/npsi_model_plot_",waste,".pdf"),onefile=T,width=10,height=8,paper="a4r") 
   outplot <- filter(out_tibble, death == death_access & beta == beta_access)
   outplot <- outplot$outs ; outplot <- as.data.frame(outplot) # clean output
   outplot$"Total host population" <- outplot[,"S"] + outplot[,"I"] # add sum host population
@@ -168,40 +185,62 @@ npsi_func <- function(){ # start npsi_func
   } # end plot
   # add mean plot
   dev.off() # save output to dir
-  cat(paste0("\n\n\nPlot is saved in \n",getwd(), "\nas npsi_model_plot.pdf\n\n\n"))
+  cat(paste0("\n\n\nPlot is saved in \n",getwd(), "\nas npsi_model_plot_",waste,".pdf\n\n\n"))
   return(out_tibble)
 } # ------- end npsi_func 
 
+# set waste outputs
+# waste_host = waste produced per host (suscept or infect)  
+# waste_drool = waste produced per feeding bout per host (suscept or infect)  
+# waste_sum = summed waste as overall output (plus plant death)
+wastes <- c(waste_host,waste_drool,waste_sum)
+
 ### run model function 
-out_tibble <- npsi_func()
-  
+out_tibble_ws <- npsi_func("waste_sum")
+out_tibble_wd <- npsi_func("waste_drool")
+out_tibble_wh <- npsi_func("waste_host")
+
 ################################### end simulation model  #################################
 ##########################################################################################
 
 ################################### plot results manually  #################################
 
+### -------------------------- user defined params -------------------------------
 # set parameter ranges (min 0, max 1)
-beta_access <- 0.1 # choose your beta value you want to plot at the end
-death_access <- 0.9 # choose your death value you want to plot at the end
+beta_access <- 0.9 # choose your beta value you want to plot at the end
+death_access <- 0.1 # choose your death value you want to plot at the end
 colvv <- "orange" # choose your plot line colour
 
+#pdf(paste0(getwd(),"/npsi_model_plot_",ttl,".pdf"),onefile=T,width=10,height=8,paper="a4r") 
 # then run this part to plot in your live R session
-
-outplot <- filter(out_tibble, death == death_access & beta == beta_access)
-outplot <- outplot$outs ; outplot <- as.data.frame(outplot) # clean output
-outplot$"Total host population" <- outplot[,"S"] + outplot[,"I"] # add sum host population
-
 layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
-colnames(outplot) <- c("Time",
-                       "Nutrient biomass",
-                       "Product biomass", 
-                       "Hosts (susceptible)",
-                       "Hosts (infected)",
-                       "Total hosts")
-for (name in names(outplot)[c(3:5,2,6)]){ # start plot
-  plot(outplot[,1],outplot[,name],type="l",las=1,bty="n",
-       xlab="Time (years)",ylab=name,col=colvv,
-       ylim=c(0,round_any(max(outplot[,name]),10,ceiling))
-  )
-} # end plot
+wastes <- list(out_tibble_wh,out_tibble_wd,out_tibble_ws)
+ttl_list <- c("Host waste","Drool waste","Summed waste")
+out_names <- c("Time",
+               "Nutrient biomass",
+               "Product biomass", 
+               "Hosts (susceptible)",
+               "Hosts (infected)",
+               "Total hosts")
+colvec<-brewer.pal(length(wastes),"Set2")
+
+pf <- 1 # plot feature counter
+pc <- 1 # plot number counter
+
+for(out_tibble in wastes){  
+  outplot <- filter(out_tibble, death == death_access & beta == beta_access)
+  outplot <- outplot$outs ; outplot <- as.data.frame(outplot) # clean output
+  outplot$"Total host population" <- outplot[,"S"] + outplot[,"I"] # add sum host population
+  colnames(outplot) <- out_names
+  for (name in names(outplot)[c(3:5,2,6)]){ # start plot
+    plot(outplot[,1],outplot[,name],type="l",las=1,bty="n",
+         xlab="Time (years)",ylab=name,
+         col=colvec[pf],#lty=pf,
+         ylim=c(0,round_any(max(outplot[,name]),10,ceiling))
+    )
+  } # end plot loop
+  title(paste0(ttl_list[pc],"\nbeta = ",beta_access,"; death = ",death_access))
+  #dev.off()
+  pf <- pf + 1; pc <- pc + 1
+} # end wastes loop
 
