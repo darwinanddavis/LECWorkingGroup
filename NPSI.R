@@ -55,7 +55,7 @@ time.out <- 0.01 # simulation time step (0.01 = 1 year if years = 100)
 
 # ---------------------- run the model from here # ---------------------- 
 # load packages
-packages <- c("RCurl","RColorBrewer","viridis","deSolve","ggplot2","dplyr","tibble","purrr","reshape2","tidyr","zoo","plyr") 
+packages <- c("RCurl","RColorBrewer","viridis","deSolve","ggplot2","dplyr","tibble","purrr","reshape2","tidyr","zoo","plyr","beepr") 
 if (require(packages)) {
   install.packages(packages,dependencies = T)
   require(packages)
@@ -154,27 +154,29 @@ npsi_func <- function(){ # start npsi_func
   outplot$"Total host population" <- outplot[,"S"] + outplot[,"I"] # add sum host population
   # plot results
   layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
-  colnames(outplot) <- c("Time",
-                         "Nutrient biomass",
-                         "Product biomass", 
-                         "Hosts (susceptible)",
-                         "Hosts (infected)",
-                         "Total hosts")
-  for (name in names(outplot)[c(3:5,2,6)]){ # start plot
+  colnames(outplot) <- c("Time", #1
+                         "Nutrient biomass", #2
+                         "Plant biomass", #3
+                         "Hosts (susceptible)", #4
+                         "Hosts (infected)", #5
+                         "Total hosts") #6
+  for (name in names(outplot)[c(3:5,2,6)]){ # start plot for product, suscep hosts, infec hosts, nutrients, and total hosts
     plot(outplot[,1],outplot[,name],type="l",las=1,bty="n",
          xlab="Time (years)",ylab=name,col=colvv,
          ylim=c(0,round_any(max(outplot[,name]),10,ceiling))
     )
+    title(paste0(name,"\nbeta = ",beta_access," , death = ",death_access))
   } # end plot
   # add mean plot
   dev.off() # save output to dir
   cat(paste0("\n\n\nPlot is saved in \n",getwd(), "\nas npsi_model_plot.pdf\n\n\n"))
+  replicate(1,{beep(rep_len(8,1))}) # play sound when finished 
   return(out_tibble)
 } # ------- end npsi_func 
-
+beep("/Users/malishev/Music/Dolly Parton-Jolen (Kokenn edit).mp3")
 ### run model function 
 out_tibble <- npsi_func()
-  
+
 ################################### end simulation model  #################################
 ##########################################################################################
 
@@ -182,7 +184,7 @@ out_tibble <- npsi_func()
 
 # set parameter ranges (min 0, max 1)
 beta_access <- 0.1 # choose your beta value you want to plot at the end
-death_access <- 0.9 # choose your death value you want to plot at the end
+death_access <- 0.1 # choose your death value you want to plot at the end
 colvv <- "orange" # choose your plot line colour
 
 # then run this part to plot in your live R session
@@ -192,16 +194,17 @@ outplot <- outplot$outs ; outplot <- as.data.frame(outplot) # clean output
 outplot$"Total host population" <- outplot[,"S"] + outplot[,"I"] # add sum host population
 
 layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
-colnames(outplot) <- c("Time",
-                       "Nutrient biomass",
-                       "Product biomass", 
-                       "Hosts (susceptible)",
-                       "Hosts (infected)",
-                       "Total hosts")
-for (name in names(outplot)[c(3:5,2,6)]){ # start plot
+colnames(outplot) <- c("Time", #1
+                       "Nutrient biomass", #2
+                       "Plant biomass", #3
+                       "Hosts (susceptible)", #4
+                       "Hosts (infected)", #5
+                       "Total hosts") #6
+for (name in names(outplot)[c(3:5,2,6)]){ # start plot for product, suscep hosts, infec hosts, nutrients, and total hosts
   plot(outplot[,1],outplot[,name],type="l",las=1,bty="n",
        xlab="Time (years)",ylab=name,col=colvv,
        ylim=c(0,round_any(max(outplot[,name]),10,ceiling))
   )
+  title(paste0(name,"\nbeta = ",beta_access," , death = ",death_access))
 } # end plot
 
