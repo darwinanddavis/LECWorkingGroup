@@ -208,21 +208,20 @@ out_tibble_wh <- npsi_func("waste_host")
 
 ### -------------------------- user defined params -------------------------------
 # set parameter ranges (min 0, max 1)
-beta_access <- 0.1 # choose your beta value you want to plot at the end
+beta_access <- 1 # choose your beta value you want to plot at the end
 death_access <- 0.1 # choose your death value you want to plot at the end
-colvv <- "orange" # choose your plot line colour
 
 #pdf(paste0(getwd(),"/npsi_model_plot_",ttl,".pdf"),onefile=T,width=10,height=8,paper="a4r") 
 # then run this part to plot in your live R session
 layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
 wastes <- list(out_tibble_wh,out_tibble_wd,out_tibble_ws)
 ttl_list <- c("Host waste","Drool waste","Summed waste")
-out_names <- c("Time", #1
-               "Nutrient biomass", #2
-               "Plant biomass", #3
-               "Hosts (susceptible)", #4
-               "Hosts (infected)", #5
-               "Total hosts") #6
+out_names <- c("Time",
+               "Nutrient biomass",
+               "Plant biomass", 
+               "Hosts (susceptible)",
+               "Hosts (infected)",
+               "Total hosts")
 colvec<-brewer.pal(length(wastes),"Set2")
 
 pf <- 1 # plot feature counter
@@ -242,6 +241,7 @@ for(out_tibble in wastes){
     title(paste0(name,"\nbeta = ",beta_access," , death = ",death_access))
   } # end plot loop
   #dev.off()
+  title(paste0("\n\n\n",ttl_list[pc]))
   pf <- pf + 1; pc <- pc + 1
 } # end wastes loop
 
