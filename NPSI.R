@@ -173,7 +173,7 @@ npsi_func <- function(){ # start npsi_func
   replicate(1,{beep(rep_len(8,1))}) # play sound when finished 
   return(out_tibble)
 } # ------- end npsi_func 
-beep("/Users/malishev/Music/Dolly Parton-Jolen (Kokenn edit).mp3")
+
 ### run model function 
 out_tibble <- npsi_func()
 
