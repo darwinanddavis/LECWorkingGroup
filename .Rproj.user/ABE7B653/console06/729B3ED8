@@ -406,3 +406,27 @@ git: 'add.' is not a git command. See 'git --help'.
 Did you mean this?
 	add
 ]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git commit m[K-m ''p'l'o't' 'u'p'd'a't'e's'[1P';'4'D'[1P'[1P'[1P'
+[master 55e7e5a] plot update
+ 4 files changed, 25 insertions(+), 3 deletions(-)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git push
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 1.15 KiB | 0 bytes/s, done.
+Total 11 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/5)   [Kremote: Resolving deltas:  20% (1/5)   [Kremote: Resolving deltas:  40% (2/5)   [Kremote: Resolving deltas:  60% (3/5)   [Kremote: Resolving deltas:  80% (4/5)   [Kremote: Resolving deltas: 100% (5/5)   [Kremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   92ddeb4..55e7e5a  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git s[Klog
+[?1h=[33mcommit 55e7e5ac8bfcae272d0542a52265fd98ab9fe582[m[m
+Author: darwinanddavis <matthew.malishev@gmail.com>[m
+Date:   Thu Jan 31 22:22:38 2019 -0500[m
+[m
+    plot update[m
+[m
+[33mcommit 92ddeb432604b4af2a977a500039d4694d186fd0[m[m
+Author: darwinanddavis <matthew.malishev@gmail.com>[m
+Date:   Thu Jan 31 14:25:49 2019 -0500[m
+:[K[K[K:[K[K:[K[K[K:[K[K[?1l>]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ 
+git add .

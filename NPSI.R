@@ -29,8 +29,6 @@
 ################################# User inputs for model ##################################
 ##########################################################################################
 
-
-
 # set your working directory 
 # E.g "/Users/malishev/dope_models/my_dope_model/"
 wd <- "paste the path to where you saved the model here (with these quotes)"
@@ -45,7 +43,7 @@ colvv <- "orange" # choose your plot line colour
 N <- 200 # size of nutrient biomass in env 
 P <- 200 # initial products in env
 S <- 20 # num of susceptible hosts
-In <- 2 # num of infected hosts 
+In <- 20 # num of infected hosts 
 years <- 100 # number of years to run simulation
 time.out <- 0.01 # simulation time step (0.01 = 1 year if years = 100) 
 

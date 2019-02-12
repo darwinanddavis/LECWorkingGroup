@@ -211,6 +211,7 @@ out_tibble_wh <- npsi_func("waste_host")
 beta_access <- 1 # choose your beta value you want to plot at the end
 death_access <- 0.1 # choose your death value you want to plot at the end
 
+### -------------------------- run code from here to plot 
 #pdf(paste0(getwd(),"/npsi_model_plot_",ttl,".pdf"),onefile=T,width=10,height=8,paper="a4r") 
 # then run this part to plot in your live R session
 layout(matrix(c(1,2,3,4,5,5), 2, 3, byrow = TRUE)) # set plot window
@@ -257,6 +258,7 @@ out_name <- out_names[5]
 # choose your death value you want to plot at the end
 death_access <- 0.9
 
+### -------------------------- run code from here to plot
 #pdf(paste0(getwd(),"/npsi_model_plot_",ttl,".pdf"),onefile=T,width=10,height=8,paper="a4r") 
 # then run this part to plot in your live R session
 layout(matrix(c(1,2,3), 1, 3, byrow = TRUE)) # set plot window
