@@ -46,7 +46,7 @@ colvv <- "orange" # choose your plot line colour
 
 ## initial conditions
 N <- 200 # size of nutrient biomass in env 
-P <- 200 # initial products in env
+P <- 200 # initial plants in env
 S <- 20 # num of susceptible hosts
 In <- 2 # num of infected hosts 
 years <- 100 # number of years to run simulation
