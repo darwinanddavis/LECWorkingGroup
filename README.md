@@ -1,6 +1,6 @@
 # Quantifying effects of parasites on ecosystem nutrient cycling  
     
-<img src="https://raw.githubusercontent.com/darwinanddavis/LECWorkingGroup/master/lec.jpeg" alt=" " width=1000 height=400>  
+<img src="https://raw.githubusercontent.com/darwinanddavis/LECWorkingGroup/master/lec.jpeg" alt=" " width=1000 height=500>  
 
 **[Living Earth Collaborative Center for Biodiversity](https://livingearthcollaborative.wustl.edu/) Working Group**    
 **Washington University**    
