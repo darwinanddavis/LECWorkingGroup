@@ -208,7 +208,7 @@ out_tibble_wh <- npsi_func("waste_host")
 
 ### -------------------------- user defined params -------------------------------
 # set parameter ranges (min 0, max 1)
-beta_access <- 1 # choose your beta value you want to plot at the end
+beta_access <- 0.9 # choose your beta value you want to plot at the end
 death_access <- 0.1 # choose your death value you want to plot at the end
 
 ### -------------------------- run code from here to plot 
@@ -254,9 +254,9 @@ out_names <- c("Time", #1
                "Hosts (infected)", #5
                "Total hosts") #6
 # select output to plot
-out_name <- out_names[5] 
+out_name <- out_names[2] 
 # choose your death value you want to plot at the end
-death_access <- 0.9
+death_access <- 0.1
 
 ### -------------------------- run code from here to plot
 #pdf(paste0(getwd(),"/npsi_model_plot_",ttl,".pdf"),onefile=T,width=10,height=8,paper="a4r") 

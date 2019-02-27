@@ -181,7 +181,7 @@ out_tibble <- npsi_func()
 ################################### plot results manually  #################################
 
 # set parameter ranges (min 0, max 1)
-beta_access <- 0.1 # choose your beta value you want to plot at the end
+beta_access <- 0.9 # choose your beta value you want to plot at the end
 death_access <- 0.1 # choose your death value you want to plot at the end
 colvv <- "orange" # choose your plot line colour
 
