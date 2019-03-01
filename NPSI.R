@@ -2,6 +2,11 @@
 ## LEC working group 
 ## Rachel Penczykowski, J. Trevor Vannatta, Matt Malishev, Zoe Johnson
 
+# TO DO
+# need to balance out nutrient and plant biomass equations (minus terms) 
+# use parasite-host worm model instead (keep biomass)
+# remove waste parts from susc and infected hosts b/c waste doesnt detract from host biomass. 
+
 ## STATE VARIABLES (units = biomass)
 ## N = nutrients
 ## P = plants
@@ -205,4 +210,3 @@ for (name in names(outplot)[c(3:5,2,6)]){ # start plot for product, suscep hosts
   )
   title(paste0(name,"\nbeta = ",beta_access," , death = ",death_access))
 } # end plot
-
