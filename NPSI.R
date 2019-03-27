@@ -58,7 +58,7 @@ time.out <- 0.01 # simulation time step (0.01 = 1 year if years = 100)
 
 # ---------------------- run the model from here # ---------------------- 
 # load packages
-packages <- c("RCurl","RColorBrewer","viridis","deSolve","ggplot2","dplyr","tibble","purrr","reshape2","tidyr","zoo","plyr","beepr") 
+packages <- c("RCurl","RColorBrewer","viridis","deSolve","ggplot2","ggthemes","dplyr","tibble","purrr","reshape2","tidyr","zoo","plyr") 
 if (require(packages)) {
   install.packages(packages,dependencies = T)
   require(packages)
@@ -173,7 +173,6 @@ npsi_func <- function(){ # start npsi_func
   # add mean plot
   dev.off() # save output to dir
   cat(paste0("\n\n\nPlot is saved in \n",getwd(), "\nas npsi_model_plot.pdf\n\n\n"))
-  replicate(1,{beep(rep_len(8,1))}) # play sound when finished 
   return(out_tibble)
 } # ------- end npsi_func 
 
