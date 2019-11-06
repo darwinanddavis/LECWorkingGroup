@@ -41,9 +41,23 @@ LEC100testrecords.txt
 search_term_inputs.txt  
 article_col_names.txt  
 lec_keyword_search.R   
-lec_keyword_search.pdf  
+lec_keyword_search.pdf    
 
-:one: Follow the instructions in the _lec_keyword_search.pdf_ file.    
+:one: Enter either Title or Abstract to search for the keywords.    
+
+```{r}
+extract1 <- "Title" 
+```  
+
+:two: Enter what data you want to get out of the final results. For example, if you want to know what year in which the resulting papers were published, type in "_Year_".  
+
+Use any search term you specified in the _search_terms_input.txt_ file.  
+
+```{r}
+extract2 <- "Year"  
+```  
+
+:three: Follow the instructions in the _lec_keyword_search.pdf_ file.    
 
 ## Instructions for meta-analysis scrape bot  
 

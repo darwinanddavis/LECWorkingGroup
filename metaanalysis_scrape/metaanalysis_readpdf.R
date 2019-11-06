@@ -21,35 +21,14 @@ unreadable_pdf <- list() # list for storing unreadable pdfs
 colC_names <- c("PaperID","C")
 
 # set col names for output 
-rv_names <- c(
-  "Relevance",
-  "Line number",
-  "Parasite type",
-  "Line number",
-  "Response variable",
-  "Line number",
-  "Effect variance",
-  "Line number",
-  "Sample size",
-  "Line number",
-  "P val",
-  "Line number"
-)
-rv_names %>% class
-
 rv_names <- paste(
   "Relevance",
-  
   "Parasite type",
-  
   "Response variable",
-  
   "Effect variance",
-  
   "Sample size",
   "P val",sep=",Line number,"
 )
-
 
 #################################### read in pdfs from dir  
 f <- 1

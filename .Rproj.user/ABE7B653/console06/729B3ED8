@@ -618,3 +618,30 @@ nqhp_model.Rproj
 origin	https://github.com/darwinanddavis/LECWorkingGroup (fetch)
 origin	https://github.com/darwinanddavis/LECWorkingGroup (push)
 ]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git [K commit -m '' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca''d'd'e'd' 'l'e'c'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp''d'a't'e'd' '[1P'[1P'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu pdated keyo[Kwork and meta bots'[1P[1@d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[master 22798e8] updated keyword and meta bots
+ 18 files changed, 867 insertions(+), 303 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (86%)
+ create mode 100644 keyword_scrape/LEC100testrecords.txt
+ create mode 100644 keyword_scrape/article_col_names.txt
+ create mode 100644 keyword_scrape/lec_keyword_search.R
+ create mode 100644 keyword_scrape/lec_keyword_search.pdf
+ create mode 100644 keyword_scrape/required_files.txt
+ create mode 100644 keyword_scrape/search_term_inputs.txt
+ create mode 100644 metaanalysis_scrape/metaanalysis_readpdf.R
+ create mode 100644 metaanalysis_scrape/title_abstract_terms.txt
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git push
+Counting objects: 28, done.
+Delta compression using up to 4 threads.
+Compressing objects:   3% (1/26)   Compressing objects:   7% (2/26)   Compressing objects:  11% (3/26)   Compressing objects:  15% (4/26)   Compressing objects:  19% (5/26)   Compressing objects:  23% (6/26)   Compressing objects:  26% (7/26)   Compressing objects:  30% (8/26)   Compressing objects:  34% (9/26)   Compressing objects:  38% (10/26)   Compressing objects:  42% (11/26)   Compressing objects:  46% (12/26)   Compressing objects:  50% (13/26)   Compressing objects:  53% (14/26)   Compressing objects:  57% (15/26)   Compressing objects:  61% (16/26)   Compressing objects:  65% (17/26)   Compressing objects:  69% (18/26)   Compressing objects:  73% (19/26)   Compressing objects:  76% (20/26)   Compressing objects:  80% (21/26)   Compressing objects:  84% (22/26)   Compressing objects:  88% (23/26)   Compressing objects:  92% (24/26)   Compressing objects:  96% (25/26)   Compressing objects: 100% (26/26)   Compressing objects: 100% (26/26), done.
+Writing objects:   3% (1/28)   Writing objects:   7% (2/28)   Writing objects:  10% (3/28)   Writing objects:  14% (4/28)   Writing objects:  17% (5/28)   Writing objects:  21% (6/28)   Writing objects:  25% (7/28)   Writing objects:  28% (8/28)   Writing objects:  32% (9/28)   Writing objects:  35% (10/28)   Writing objects:  39% (11/28)   Writing objects:  42% (12/28)   Writing objects:  46% (13/28)   Writing objects:  50% (14/28)   Writing objects:  53% (15/28)   Writing objects:  57% (16/28)   Writing objects:  60% (17/28)   Writing objects:  64% (18/28)   Writing objects:  67% (19/28)   Writing objects:  71% (20/28)   Writing objects:  75% (21/28)   Writing objects:  78% (22/28)   Writing objects:  82% (23/28)   Writing objects:  85% (24/28)   Writing objects:  89% (25/28)   Writing objects:  92% (26/28)   Writing objects:  96% (27/28)   Writing objects: 100% (28/28)   Writing objects: 100% (28/28), 107.80 KiB | 0 bytes/s, done.
+Total 28 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/10)[Kremote: Resolving deltas:  10% (1/10)[Kremote: Resolving deltas:  20% (2/10)[Kremote: Resolving deltas:  30% (3/10)[Kremote: Resolving deltas:  40% (4/10)[Kremote: Resolving deltas:  50% (5/10)[Kremote: Resolving deltas:  60% (6/10)[Kremote: Resolving deltas:  70% (7/10)[Kremote: Resolving deltas:  80% (8/10)[Kremote: Resolving deltas:  90% (9/10)[Kremote: Resolving deltas: 100% (10/10)[Kremote: Resolving deltas: 100% (10/10), completed with 10 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   bea838d..22798e8  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ got [K[K[Kit remote --n[Kv
+origin	https://github.com/darwinanddavis/LECWorkingGroup (fetch)
+origin	https://github.com/darwinanddavis/LECWorkingGroup (push)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git adad .[K[K[K[K[Kdd. [K[K .
