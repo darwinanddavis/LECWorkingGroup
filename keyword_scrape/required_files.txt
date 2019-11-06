@@ -1,0 +1,5 @@
+LEC100testrecords.txt
+search_term_inputs.txt
+article_col_names.txt
+lec_keyword_search.R 
+lec_keyword_search.pdf

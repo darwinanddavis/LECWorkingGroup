@@ -32,6 +32,29 @@ Develop a predictive framework for estimating indirect effects of parasites on e
 :two: [Download the model file (right click here and 'Save link as')](https://github.com/darwinanddavis/LECWorkingGroup/raw/master/NPSI.R?raw=true) and run the simulation model in `RStudio`.  
 :three: Follow the instructions at the beginning of the `R` file to run the model.        
 
+
+## Instructions for keyword scrape bot  
+
+Required files:  
+
+LEC100testrecords.txt  
+search_term_inputs.txt  
+article_col_names.txt  
+lec_keyword_search.R   
+lec_keyword_search.pdf  
+
+:one: Follow the instructions in the _lec_keyword_search.pdf_ file.    
+
+## Instructions for meta-analysis scrape bot  
+
+Required files:  
+
+metaanalysis_readpdf.R  
+title_abstract_terms.txt    
+
+:one: Follow the instructions in the _metaanalysis_readpdf.R_ model file.           
+:two: Set the working path to the dir containing the PDF files for scraping  
+    
 ## Troubleshooting  
 
 All troubleshooting and bugs can be sent as a git issue or to matthew.malishev [at] emory.edu.     

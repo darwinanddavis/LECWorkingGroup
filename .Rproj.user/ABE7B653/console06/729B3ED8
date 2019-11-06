@@ -595,4 +595,26 @@ Total 15 (delta 6), reused 0 (delta 0)
 remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  16% (1/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  50% (3/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas:  83% (5/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
 To https://github.com/darwinanddavis/LECWorkingGroup
    31b35ce..2a59674  master -> master
-]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ 
+ls
+NPSI.R
+NPSI.Rproj
+NPSI_altwaste.R
+README.md
+altwaste_infect.pdf
+altwaste_nutrients.pdf
+altwaste_plant.pdf
+keyword_scrape
+lec.jpeg
+metaanalysis_scrape
+npsi_model_plot.pdf
+npsi_model_plot_waste_drool.pdf
+npsi_model_plot_waste_host.pdf
+npsi_model_plot_waste_sum.pdf
+nqhp_model.R
+nqhp_model.Rmd
+nqhp_model.Rproj
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ open README.md 
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git remote --v
+origin	https://github.com/darwinanddavis/LECWorkingGroup (fetch)
+origin	https://github.com/darwinanddavis/LECWorkingGroup (push)
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .
