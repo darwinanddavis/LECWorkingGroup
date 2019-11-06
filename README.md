@@ -5,7 +5,7 @@
 **[Living Earth Collaborative Center for Biodiversity](https://livingearthcollaborative.wustl.edu/) Working Group**    
 **Washington University**    
 **St. Louis, MO, USA**       
-**December 4-7, 2018**       
+**December 4-7, 2018 and May 5–10, 2019**         
 
 Participants:  
 Amanda Koltz (co-organizer), Washington University in St. Louis, USA  
@@ -32,8 +32,9 @@ Develop a predictive framework for estimating indirect effects of parasites on e
 :two: [Download the model file (right click here and 'Save link as')](https://github.com/darwinanddavis/LECWorkingGroup/raw/master/NPSI.R?raw=true) and run the simulation model in `RStudio`.  
 :three: Follow the instructions at the beginning of the `R` file to run the model.        
 
+## Instructions for keyword scrape bot    
 
-## Instructions for keyword scrape bot  
+The bot reads a .txt file of literature entries resulting from a keyword search term query output from a Web of Science database search and returns a new file containing user defined search terms.  
 
 Required files:  
 
@@ -61,6 +62,23 @@ extract2 <- "Year"
 
 ## Instructions for meta-analysis scrape bot  
 
+The bot scrapes PDF articles (.pdf) based on user defined search terms and returns a local file of meta-analysis data.  
+
+Example search terms:  
+
+_mortality, surviv*, fecund*, body condit*, body, body mass, feed*, feeding rate, feeding amount, waste, faec*, fece*, urin*, ecosystem, plant, soil, nutrie*_  
+
+Example outputs from meta-analysis:    
+
+```{r}
+"Relevance",
+"Parasite type",
+"Response variable",
+"Effect variance",
+"Sample size",
+"P val"
+```    
+
 Required files:  
 
 metaanalysis_readpdf.R  
@@ -69,7 +87,7 @@ title_abstract_terms.txt
 :one: Follow the instructions in the _metaanalysis_readpdf.R_ model file.           
 :two: Set the working path to the dir containing the PDF files for scraping  
     
-## Troubleshooting  
+## :pig: Troubleshooting  
 
 All troubleshooting and bugs can be sent as a git issue or to matthew.malishev [at] emory.edu.     
 
