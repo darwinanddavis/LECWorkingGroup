@@ -183,7 +183,7 @@ $$
 \frac
 {dQ_F}
 {dt} = 
-\mu_M N \text (??) -
+\mu_M N \text (r) -
   \mu_M Q_F(1 - \frac
     {m_F}
     {Q_F})

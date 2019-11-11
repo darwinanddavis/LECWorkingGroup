@@ -868,3 +868,26 @@ To https://github.com/darwinanddavis/LECWorkingGroup
 [K
 [K
 [K[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Padd .
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git add .[K[K[K[K[Kcommit -m '' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca''d'd' 't'i'c'[1P'[1P'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu''p'd'a't'e'd' 't'i'c' '[1P't'a'c' 'a'n'd' '[1P'[1P'[1P'[1P'n' 'n'q'h'p' 'm'o'd'e'l'[1P'[1P'[1P'[1P'[1P'd'o'c's'[1P'[1P'[1P'[1P'h't'm'l'
+[master 5a6792a] updated tictac n nqhp html
+ 11 files changed, 1443 insertions(+), 88 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (87%)
+ delete mode 100644 Untitled.Rmd
+ create mode 100644 img/gutworm_model_schematic.png
+ create mode 100644 img/landscape2.jpeg
+ rename Untitled.html => nqhp_model.html (60%)
+ create mode 100644 tictactoe.Rmd
+ create mode 100644 tictactoe.Rproj
+ create mode 100644 tictactoe.html
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ git push
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects:   6% (1/16)   Compressing objects:  12% (2/16)   Compressing objects:  18% (3/16)   Compressing objects:  25% (4/16)   Compressing objects:  31% (5/16)   Compressing objects:  37% (6/16)   Compressing objects:  43% (7/16)   Compressing objects:  50% (8/16)   Compressing objects:  56% (9/16)   Compressing objects:  62% (10/16)   Compressing objects:  68% (11/16)   Compressing objects:  75% (12/16)   Compressing objects:  81% (13/16)   Compressing objects:  87% (14/16)   Compressing objects:  93% (15/16)   Compressing objects: 100% (16/16)   Compressing objects: 100% (16/16), done.
+Writing objects:   5% (1/17)   Writing objects:  11% (2/17)   Writing objects:  17% (3/17)   Writing objects:  23% (4/17)   Writing objects:  29% (5/17)   Writing objects:  35% (6/17)   Writing objects:  41% (7/17)   Writing objects:  47% (8/17)   Writing objects:  52% (9/17)   Writing objects:  58% (10/17)   Writing objects:  64% (11/17)   Writing objects:  70% (12/17)   Writing objects:  76% (13/17)   Writing objects:  82% (14/17)   Writing objects:  88% (15/17)   Writing objects:  94% (16/17)   Writing objects: 100% (17/17)   Writing objects: 100% (17/17), 696.08 KiB | 0 bytes/s, done.
+Total 17 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  14% (1/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 6 local objects.[K
+To https://github.com/darwinanddavis/LECWorkingGroup
+   9ba5df6..5a6792a  master -> master
+]0;~/Documents/Emory/research/workshops/stl/model6300L-127771-M:model malishev$ [K6300L-127771-M:model malishev$ git pushcommit -m 'uppdated tictac n nqhp html'[A[C[C[C[C[C[C[C[C[C[7Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
