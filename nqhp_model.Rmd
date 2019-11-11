@@ -13,6 +13,13 @@ linkcolor: pink
 urlcolor: blue
 citecolor: red
 output:
+  html_document:
+    highlight: tango
+    code_folding: hide
+    toc: yes
+    toc_depth: 4
+    number_sections: no
+    toc_float: yes
   pdf_document:
     includes:
       in_header: # add .tex file with header content
@@ -28,13 +35,6 @@ output:
     citation_package: biblatex # natbib
     latex_engine: xelatex #pdflatex # lualatex
     keep_tex: true # keep .tex file in dir 
-  html_document:
-    highlight: tango
-    code_folding: hide
-    toc: yes
-    toc_depth: 4
-    number_sections: no
-    toc_float: yes
   word_document:
     highlight: tango
     keep_md: yes
@@ -49,7 +49,7 @@ tags:
 - nothing
 - nothingness
 params: 
-  dir: "/Users/malishev/Documents/Emory/research/workshops/stl/tictactoe"
+  dir: "/Users/malishev/Documents/Emory/research/workshops/stl/model"
   date: !r Sys.Date()
   version: !r getRversion()
   email: "matthew.malishev@gmail.com"
@@ -100,14 +100,6 @@ Date: `r params$date`
 
 \newpage  
 
-**TO DO**    
-- Two candidate models, one gut parasite model where parasites subtract from nutrient reserve within host (pre host growth) and one tissue parasite model where parasites subtract from host biomass (post host growth).  
-- Find min and max bounds on nutrient quota for uptake rates (Q_M- and Q_M+)
-- Phosphorous content and stoich flexiblity (Paul Frost, Charlotte Narr, Nicole Wagner)      
-
-
-\newpage  
-
 ## Overview  
 
 A disease transmission consumer-resource model for host populations exposed to and infected by gut parasites that tracks growth of food (autotrophs) in the environment, quantity (biomass) and quality (nutrient levels) of food consumed by hosts, within-host parasite biomass of infected host populations, and nutrient recycling back into the environment that is explicit in the ratio of carbon to total nutrient biomass.  
@@ -135,7 +127,7 @@ $\mu_M$ = maximum uptake rate of biomass
 $F$ = carbon biomass in food biomass  
 $Q_R$ = nutrient to carbon $(\frac{N}{C})$ ratio in food biomass, so that $Q_R \cdot R$ is the nutrient level in food biomass.       
 
-![Figure 1. Model schematic with state variables](gutworm_model_schematic.png)  
+![Figure 1. Model schematic with state variables](img/gutworm_model_schematic.png)  
 
 
 \newpage  
