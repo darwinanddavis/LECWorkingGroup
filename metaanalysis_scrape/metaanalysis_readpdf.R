@@ -1,4 +1,4 @@
-# extract text from pdfs
+# extract data from pdfs
 
 ### before running ###
 # 1. delete first summary page of PDF if present
@@ -13,7 +13,8 @@ if (require(packages)) {
 ppp <- lapply(packages,require,character.only=T); if(any(ppp==F)){cat("\n\n\n ---> Check packages are loaded properly <--- \n\n\n")}
 
 #################################### set wd
-wd <- "/Users/malishev/Documents/Emory/research/workshops/stl/journal_data/meta_analysis/"
+wd <- "your working dir"
+pdf_folder <- "folder where pdf files live"
 setwd(wd)
 
 colC <- list() # create empty list for relevance data (colC in LEC data extraction sheet)
@@ -32,11 +33,11 @@ rv_names <- paste(
 
 #################################### read in pdfs from dir  
 f <- 1
-file_list<-list.files(paste0(wd,"matts_pdfs/")) # list files
+file_list<-list.files(paste0(wd,"/",pdf_folder,"/")) # list files
 file_list
 pdf_list<-as.list(rep(1,length(file_list))) # empty list
 for (f in 1:length(pdf_list)){ # read in pdfs
-  p <- pdf_text(paste0(wd,"matts_pdfs/",file_list[f])) # read pdf
+  p <- pdf_text(paste0(wd,"/",pdf_folder,"/",file_list[f])) # read pdf
   p <- read_lines(p) # convert to txt file
   pdf_list[[f]]<-p# save to master pdf list  
 }
@@ -58,44 +59,7 @@ for(nn in 1:length(file_list)){
      unreadable_pdf <- unlist(unreadable_pdf); unreadable_pdf <- unreadable_pdf[!is.na(unreadable_pdf)]
    }
    cat(fh,"\n",nn,"\n")
-     
-  
-  ######################################## make response variable df
-  # rv <- data.frame(#row.names=file.list,
-  #                  "PaperID"=file_list,
-  #                  "C"=character(length=length(file_list)),
-  #                  "Host genus"=character(length=length(file_list)),
-  #                  "Host species"=character(length=length(file_list)),
-  #                  "Parasite type"=character(length=length(file_list)),
-  #                  "Response variable"=character(length=length(file_list)),
-  #                  "Sample size"=numeric(length=length(file_list)),
-  #                  "Direction of response to more infection"=numeric(length=length(file_list)),
-  #                  "Effect size type"=numeric(length=length(file_list)),
-  #                  "Value"=numeric(length=length(file_list)),
-  #                  "Variance type"=numeric(length=length(file_list)),
-  #                  "Variance"=numeric(length=length(file_list)),
-  #                  "lower CI"=numeric(length=length(file_list)),
-  #                  "upper CI"=numeric(length=length(file_list)),
-  #                  "Total sample size (N)"=numeric(length=length(file_list)),
-  #                  "df"=numeric(length=length(file_list)),
-  #                  "ndf"=numeric(length=length(file_list)),
-  #                  "ddf"==numeric(length=length(file_list)),
-  #                  "p-val"=numeric(length=length(file_list)),
-  #                  "N infected"=numeric(length=length(file_list)),
-  #                  "N reduced or no infection"=numeric(length=length(file_list)),
-  #                  stringsAsFactors=F)
-  
-  ###### more relevant data frame 
-  # rv <- data.frame(#row.names=file.list,
-  #   "PaperID"=fh,
-  #   "Relevance"=character(length=length(fh)),
-  #   "Parasite type"=character(length=length(fh)),
-  #   "Effect variance"=character(length=length(fh)),
-  #   "Sample size"=numeric(length=length(fh)),
-  #   "Variance type"=numeric(length=length(fh)),
-  #   "P val"=numeric(length=length(fh)),
-  #   stringsAsFactors=F)
-  
+   
   #################################### read in title or abstract terms
   title_abstract_terms <- as.character(read.delim("title_abstract_terms.txt",header=F,strip.white = T,sep=",",colClasses = "character")[1,])
   title_abstract_terms <- as.character(title_abstract_terms);title_abstract_terms_neat <- title_abstract_terms
@@ -128,12 +92,6 @@ for(nn in 1:length(file_list)){
       relevance_return <- grep(title_abstract_terms,p1_ta,ignore.case = T) # scrape title and abstract for terms in protocol doc
     } # end single_paper == 0
     
-  # if(length(relevance_return)<1){ # if search terms return nothing, set data for that paper to NAs 
-    #   rv_sub <- subset(rv,"PaperID"==kt) 
-    #   rv_sub[,3:length(rv_sub)] <- NA
-    #   rv_sub$Relevance <- "No"
-    #   # replace rv with this kt with rv sub values (NAs)
-    #   } 
   if(length(relevance_return)>1){ # if search terms return nothing, set data for that paper to NAs 
     relevance_final <- "YES"
   }else{
@@ -151,10 +109,6 @@ for(nn in 1:length(file_list)){
   # this is for reading individual files
   nematode_return <- grep(nematode_terms,p1_nematode,ignore.case = T) # scrape title and abstract for terms in protocol doc
   nematode <- p1_nematode[nematode_return] # return terms in paper
-  # nematode <- p1_nematode[nematode_return[1]] # get just first instance of term 
-  # nematode_final <- paste( unlist(nematode), collapse='') # turn into one character string
-  # nematode_final <- strsplit(nematode_terms,nematode_text) # remove everything but the key term (in progress ... )
-  # nematode_final[[1]] # turn into char
   
   ######################################### response variable
   response_terms <- as.character(c("BCI","bci","body mass","bodymass","weig*","feedi*","feeding rate","uptak* rat*","mortal*","surviv*","defeca*","fecun*","urinat*","nutrie*","soil","plant biomass"));response_terms_neat <- response_terms
@@ -210,14 +164,7 @@ for(nn in 1:length(file_list)){
   # write out to dir
   fout <- paste0(as.character(strsplit(fh,".pdf")),".csv") # create file name 
   write.csv(rv,fout) # save to dir 
-  
-  # # write relevance file
-  # colC[nn] <- relevance_final # column in LEC data extraction worksheet
-  # # colC <- sapply(colC, "[", i = length(colC)) # turn into matrix
-  # colC_final <- data.frame("PaperID" = fh,"C" = colC) # convert to df
-  # colnames(colC_final) <- colC_names # name cols 
-  # write.csv(colC_final,"relevance.csv") # save to dir 
-  
+
 } # end loop
 unreadable_pdf # pdfs that can't be read 
 

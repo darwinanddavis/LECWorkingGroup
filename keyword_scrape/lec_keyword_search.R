@@ -17,7 +17,7 @@ p_load(dplyr,purrr,readr)
 # user inputs -------------------------------------------------------------
 
 # set working dir
-setwd("/Users/malishev/Documents/Emory/research/workshops/stl/journal_data")
+setwd("your working dir")
 
 # Step 1 ----------------------------------------------------------------------
 
@@ -114,20 +114,3 @@ if(anomalies==1){
 # final 
 cat(rep("\n",2),"Your results are saved as\n\n",fho,"\n\n in","\"",wd,"\"","\n\n using the following search terms:\n\n",keyterms_neat,rep("\n",2),
 "Total papers when searching",col2search,":",length(final[,col2search]))
-
-# q()
-
-# ------------------- lab 
-# tt <- read.delim(paste0(ww,"/LEC100testrecords.txt"),sep=" ");str(tt)
-# colnames(tt) <- as.character(1:40) # when sep=" "
-
-# potential alternative grep function
-# https://stackoverflow.com/questions/5823503/pattern-matching-using-a-wildcard/5823670
-
-## dplyr approach 
-# final_d <- filter(tt, grepl(keyterms, tt[,col2search]))
-
-# some problem entries for optimisation 
-# tt[10,]
-# tt[57,]
-
